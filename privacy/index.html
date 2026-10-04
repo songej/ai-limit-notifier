@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy - AI Limit Notifier</title>
+<meta name="description" content="How AI Limit Notifier handles usage-limit data, permissions, notifications, and the optional Continue conversation feature.">
+<link rel="canonical" href="https://songej.github.io/ai-limit-notifier/privacy/">
+<link rel="icon" href="../favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/site.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AI Limit Notifier">
+<meta property="og:title" content="Privacy policy - AI Limit Notifier">
+<meta property="og:description" content="How AI Limit Notifier handles usage-limit data, permissions, notifications, and the optional Continue conversation feature.">
+<meta property="og:url" content="https://songej.github.io/ai-limit-notifier/privacy/">
+<meta property="og:image" content="https://songej.github.io/ai-limit-notifier/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI Limit Notifier">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151515" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="wrap site-header">
+  <a class="brand" href="../">AI Limit Notifier</a>
+  <nav aria-label="Site">
+    <a href="../release-notes/">Release notes</a>
+    <a href="../privacy/" aria-current="page">Privacy</a>
+  </nav>
+</header>
+<main id="content" class="wrap prose">
+<h1>Privacy Policy</h1>
+<p class="meta">Last updated: October 4, 2026</p>
+<h2>In short</h2>
+<p>AI Limit Notifier works locally in Chrome. It shows ChatGPT and Claude usage limits, reset times, and optional alerts, and can continue a recent conversation only after you click <strong>Continue conversation</strong>.</p>
+<p>The extension has no developer-operated backend, analytics, advertising, or separate account system. Provider requests go directly from your browser to ChatGPT or Claude using the session already signed in there. The developer does not receive or sell extension data. Conversation history is not read.</p>
+<h2>Data handled locally</h2>
+<ul>
+<li><strong>Usage data:</strong> normalized usage percentages, reset times, provider state, and the last successful result can be stored in <code>chrome.storage.local</code> so the popup and badge can render quickly and temporary failures can show a labeled last-known value.</li>
+<li><strong>ChatGPT account scope:</strong> a short-lived access token returned by ChatGPT can be used in memory for the usage request and is never stored. When available, an internal account/workspace ID is reduced to a one-way SHA-256 fingerprint so state from one account does not carry into another. The raw account/workspace ID is not stored.</li>
+<li><strong>Claude organization scope:</strong> eligible organization names can be shown temporarily while you choose one. The selected organization ID and one-way SHA-256 fingerprints used to keep scopes separate can be stored locally. Organization names and account email addresses are not stored.</li>
+<li><strong>Continue target:</strong> for each enabled service, <code>chrome.storage.session</code> can temporarily hold one recent target: normalized conversation URL, conversation ID, tab and window IDs, last-seen time, and whether it is currently in view. A shortened title is added only when a reached-limit episode captures that target. Conversation history is not read.</li>
+</ul>
+<p>The shortened title can appear in the extension popup so you can verify the target. It is not displayed in the operating-system reset notification, which may appear on a lock screen or during screen sharing.</p>
+<h2>Continue conversation</h2>
+<p>Only after you click <strong>Continue conversation</strong> does the extension run a one-time script in the named ChatGPT or Claude conversation tab. It verifies the exact conversation, checks the composer locally, preserves any existing draft, inserts the chosen continue word only when the composer is empty, submits it, and confirms that the composer cleared.</p>
+<p>Composer text is never stored by the extension or sent to the developer or another server. The continue message goes directly to the selected provider conversation as the action you requested.</p>
+<h2>Notifications and device activity</h2>
+<p>The extension can notify you after a fresh check confirms that a reached limit has reset. Optional settings can also enable one 90% warning per limit window, model-limit reset alerts, Continue outcome notices, and test notifications.</p>
+<p>Chrome's <code>idle</code> API is used only to pause periodic checks while the computer is idle or locked and resume them when it becomes active. Active, idle, or locked state is not stored or transmitted.</p>
+<h2>Permissions and network access</h2>
+<ul>
+<li><code>storage</code>: stores settings, usage/reset state, opaque scope fingerprints, the Claude organization ID in use, and short-lived Continue metadata.</li>
+<li><code>alarms</code>: schedules periodic checks, reset checks, retries, badge countdown updates, and Continue cleanup.</li>
+<li><code>notifications</code>: shows the optional notifications described above.</li>
+<li><code>scripting</code>: runs the one-time Continue script only after your explicit click.</li>
+<li><code>idle</code>: pauses unnecessary checks while the device is idle or locked.</li>
+<li><code>https://chatgpt.com/*</code> and <code>https://claude.ai/*</code>: optional host permissions requested only for services you enable. They are used for usage checks and the user-triggered Continue flow, and are removed when that service is disabled.</li>
+</ul>
+<p>The extension does not request Chrome's <code>cookies</code> permission, does not use remote executable code, and does not send extension data to an analytics, advertising, or developer-operated service.</p>
+<h2>Chrome Web Store Limited Use</h2>
+<p>AI Limit Notifier adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements. User data is used only to provide or improve the extension's disclosed single purpose. It is not used for advertising, creditworthiness, profiling, or unrelated purposes.</p>
+<h2>Retention and deletion</h2>
+<p>Persistent settings and usage state remain in Chrome extension storage until replaced, cleared by Chrome or the user, or removed with the extension. Continue-target metadata is session-only and is also cleared when it is no longer eligible, used, expired, or the service is disabled. Turning a service off removes that service's stored usage and limit state and its optional site permission.</p>
+<h2>Third-party services and contact</h2>
+<p>ChatGPT is provided by OpenAI and Claude by Anthropic; their own privacy policies govern data processed by those services. AI Limit Notifier is independent and is not affiliated with or endorsed by either provider.</p>
+<p>This policy is updated when the extension's data handling changes. Questions go through the <a href="https://tally.so/r/EkyxyX" rel="noopener">contact form</a>.</p>
+</main>
+<footer class="wrap site-footer">
+  <p class="links">
+    <a href="https://chromewebstore.google.com/search/AI%20Limit%20Notifier">Chrome Web Store</a>
+    <a href="../release-notes/">Release notes</a>
+    <a href="../privacy/">Privacy policy</a>
+    <a href="https://tally.so/r/EkyxyX" rel="noopener">Contact</a>
+  </p>
+  <p class="fine">AI Limit Notifier is an independent project, not affiliated with or endorsed by OpenAI or Anthropic. ChatGPT is a trademark of OpenAI. Claude is a trademark of Anthropic.</p>
+</footer>
+</body>
+</html>

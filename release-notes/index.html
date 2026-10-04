@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Release notes - AI Limit Notifier</title>
+<meta name="description" content="User-facing release notes for AI Limit Notifier.">
+<link rel="canonical" href="https://songej.github.io/ai-limit-notifier/release-notes/">
+<link rel="icon" href="../favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/site.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AI Limit Notifier">
+<meta property="og:title" content="Release notes - AI Limit Notifier">
+<meta property="og:description" content="User-facing release notes for AI Limit Notifier.">
+<meta property="og:url" content="https://songej.github.io/ai-limit-notifier/release-notes/">
+<meta property="og:image" content="https://songej.github.io/ai-limit-notifier/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI Limit Notifier">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151515" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="wrap site-header">
+  <a class="brand" href="../">AI Limit Notifier</a>
+  <nav aria-label="Site">
+    <a href="../release-notes/" aria-current="page">Release notes</a>
+    <a href="../privacy/">Privacy</a>
+  </nav>
+</header>
+<main id="content" class="wrap prose release">
+<h1>Release notes</h1>
+
+<h2 id="v0-3-56"><span>0.3.56</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
+<ul>
+  <li>Localized all three Chrome Web Store screenshots for every supported Store language instead of reusing another locale's artwork.</li>
+</ul>
+
+<h2 id="v0-3-55"><span>0.3.55</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
+<ul>
+  <li>No user-facing behavior changed; final release verification now proves that the signed-in checks were performed against the exact Store ZIP being submitted.</li>
+</ul>
+
+<h2 id="v0-3-54"><span>0.3.54</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
+<ul>
+  <li>Improved Claude feature-limit accuracy when Cowork reports its own weekly allowance.</li>
+  <li>Added a safer final Store-upload check so a release cannot be submitted while signed-in verification is still pending or incomplete.</li>
+</ul>
+
+<h2 id="v0-3-53"><span>0.3.53</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
+<ul>
+  <li>Improved Hindi, Filipino, and Dutch interface localization so ordinary UI labels no longer fall back to English.</li>
+  <li>Strengthened localization QA so translated UI copy cannot silently become stale when the English source changes.</li>
+</ul>
+
+<h2 id="v0-3-52"><span>0.3.52</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
+<ul>
+  <li>Added Italian, Traditional Chinese, Vietnamese, Thai, Turkish, Hindi, Polish, Dutch, Filipino, Simplified Chinese, and Russian localization for the extension and Chrome Web Store listings.</li>
+  <li>Expanded market-written Store search copy while keeping the in-extension product identity and runtime behavior unchanged.</li>
+</ul>
+
+<h2 id="v0-3-51"><span>0.3.51</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
+<ul>
+  <li>Improved Chrome Web Store discoverability with market-specific titles and regional Spanish/Portuguese search wording, while keeping the in-extension brand unchanged.</li>
+  <li>Simplified the public privacy contact line and stopped attaching diagnostic metadata to the external contact-form URL.</li>
+</ul>
+
+<h2 id="v0-3-50"><span>0.3.50</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
+<ul>
+  <li>Simplified the public privacy policy so the same data-handling facts are easier to scan; extension behavior is unchanged.</li>
+</ul>
+
+<h2 id="v0-3-49"><span>0.3.49</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
+<ul>
+  <li>No user-facing behavior changed; this release makes Chrome Web Store review inputs harder to drift from the extension that is actually packaged.</li>
+</ul>
+
+<h2 id="v0-3-48"><span>0.3.48</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
+<ul>
+  <li>Improved reliability on Chrome 116–123 by recognizing the legacy <code>AbortError</code> shape from request timeouts instead of reporting it as offline.</li>
+  <li>Added regression coverage for ChatGPT accounts that report a weekly usage window in <code>primary_window</code> with no five-hour window.</li>
+  <li>Notification status is re-checked when the options or welcome page regains focus, so a changed Chrome/system permission does not leave stale UI.</li>
+</ul>
+
+<h2 id="v0-3-47"><span>0.3.47</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
+<ul>
+  <li>Added a concise Chrome Web Store privacy-form summary for release/submission work; runtime behavior is unchanged.</li>
+</ul>
+
+<h2 id="v0-3-46"><span>0.3.46</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
+<ul>
+  <li>Chrome's extension-management card now shows the clean <strong>AI Limit Notifier</strong> name and a shorter localized summary instead of a long keyword-heavy title and a clipped description.</li>
+  <li>No provider, notification, Continue, permission, storage or usage-tracking behavior changed.</li>
+</ul>
+
+<h2 id="v0-3-45"><span>0.3.45</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
+<ul>
+  <li>No user-facing behavior changed; release QA now uses the browser channel Playwright supports for unpacked Chrome extensions instead of relying on branded-Chrome sideload flags.</li>
+</ul>
+
+<h2 id="v0-3-44"><span>0.3.44</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
+<ul>
+  <li>No user-facing behavior changed; this release strengthens the checks around the exact Chrome Web Store build and current Stable Chrome.</li>
+</ul>
+
+<h2 id="v0-3-43"><span>0.3.43</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
+<ul>
+  <li>ChatGPT no longer shows a false sign-in-needed state when its session endpoint returns meaningful but unfamiliar signed-in data; that case is reported as a changed provider response instead.</li>
+  <li>A one-off ChatGPT usage-token mismatch now refreshes the browser session once and retries the usage request before showing an error.</li>
+</ul>
+
+<h2 id="v0-3-42"><span>0.3.42</span> <time class="release-date" datetime="2026-10-03">October 3, 2026</time></h2>
+<ul>
+  <li>Continue no longer treats an old conversation in a background Chrome window as recently used on Chrome 116–120, where the <code>lastAccessed</code> tab timestamp is unavailable.</li>
+  <li>A temporary HTTP 503 now respects the service's <code>Retry-After</code> instruction without being mislabeled or counted as an HTTP 429 rate limit.</li>
+</ul>
+
+<h2 id="v0-3-41"><span>0.3.41</span> <time class="release-date" datetime="2026-10-03">October 3, 2026</time></h2>
+<ul>
+  <li>Temporary service failures and HTTP 429 rate limits now keep separate retry histories, so a change between them starts with the correct first retry instead of inheriting an unrelated delay.</li>
+  <li>Damaged saved model-limit state is discarded before reset detection, preventing a false model-limit reset notification after storage corruption.</li>
+</ul>
+
+<h2 id="v0-3-40"><span>0.3.40</span> <time class="release-date" datetime="2026-10-03">October 3, 2026</time></h2>
+<ul>
+  <li>Refresh reports success only after the service worker confirms the refresh; a worker failure no longer flashes “Updated just now.”</li>
+  <li>If a settings change cannot be confirmed, the popup reloads the saved setting instead of leaving an optimistic control state behind.</li>
+  <li>Reset timestamps are parsed by their provider field contract, so absolute sentinel values cannot be mistaken for a reset happening now.</li>
+</ul>
+
+<h2 id="v0-3-39"><span>0.3.39</span> <time class="release-date" datetime="2026-10-02">October 2, 2026</time></h2>
+<ul>
+  <li>First release.</li>
+</ul>
+</main>
+<footer class="wrap site-footer">
+  <p class="links">
+    <a href="https://chromewebstore.google.com/search/AI%20Limit%20Notifier">Chrome Web Store</a>
+    <a href="../release-notes/">Release notes</a>
+    <a href="../privacy/">Privacy policy</a>
+    <a href="https://tally.so/r/EkyxyX" rel="noopener">Contact</a>
+  </p>
+  <p class="fine">AI Limit Notifier is an independent project, not affiliated with or endorsed by OpenAI or Anthropic. ChatGPT is a trademark of OpenAI. Claude is a trademark of Anthropic.</p>
+</footer>
+</body>
+</html>
