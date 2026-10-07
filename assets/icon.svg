@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g transform="translate(24 24) scale(1.090909) translate(-24 -24)">
+  <!-- Flat app icon (INVARIANTS.md I24): one Signal Blue rounded square that fills the canvas,
+       corners 16% of its width, and a solid white glyph whose sweep shows the tile. No gradients,
+       sheen, rim light or shadows. -->
+  <rect x="2" y="2" width="44" height="44" rx="7.04" fill="#2F7BFF"/>
+  <g fill="#FFFFFF">
+    <rect x="21.17" y="8.93" width="6.89" height="3.08" rx="1.54"/>
+    <path fill-rule="evenodd" d="M11.08,39.56 L14.23,32.62 A12.3,12.3 0 1 1 18.02,36.41 Z M25.84,26.03 A1.23,1.23 0 0 1 24.61,24.8 L24.61,19.25 A1.23,1.23 0 0 1 26.06,18.04 A8.12,8.12 0 0 1 32.6,24.58 A1.23,1.23 0 0 1 31.39,26.03 Z"/>
+  </g>
+  </g>
+</svg>

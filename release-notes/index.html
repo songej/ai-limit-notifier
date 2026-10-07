@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Release notes - AI Limit Notifier</title>
-<meta name="description" content="User-facing release notes for AI Limit Notifier.">
-<link rel="canonical" href="https://songej.github.io/ai-limit-notifier/release-notes/">
+<meta name="description" content="What changed in the latest AI Limit Notifier release.">
+<link rel="canonical" href="https://songej.com/ai-limit-notifier/release-notes/">
 <link rel="icon" href="../favicon.ico">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="stylesheet" href="../assets/site.css">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AI Limit Notifier">
 <meta property="og:title" content="Release notes - AI Limit Notifier">
-<meta property="og:description" content="User-facing release notes for AI Limit Notifier.">
-<meta property="og:url" content="https://songej.github.io/ai-limit-notifier/release-notes/">
-<meta property="og:image" content="https://songej.github.io/ai-limit-notifier/assets/og-image.png">
+<meta property="og:description" content="What changed in the latest AI Limit Notifier release.">
+<meta property="og:url" content="https://songej.com/ai-limit-notifier/release-notes/">
+<meta property="og:image" content="https://songej.com/ai-limit-notifier/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="AI Limit Notifier">
@@ -25,7 +25,7 @@
 <body>
 <a class="skip" href="#content">Skip to content</a>
 <header class="wrap site-header">
-  <a class="brand" href="../">AI Limit Notifier</a>
+  <a class="brand" href="../"><img src="../assets/icon.svg" width="28" height="28" alt="">AI Limit Notifier</a>
   <nav aria-label="Site">
     <a href="../release-notes/" aria-current="page">Release notes</a>
     <a href="../privacy/">Privacy</a>
@@ -34,116 +34,76 @@
 <main id="content" class="wrap prose release">
 <h1>Release notes</h1>
 
-<h2 id="v0-3-56"><span>0.3.56</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
+<h2 id="v0-3-71"><span>0.3.71</span> <time class="release-date" datetime="2026-10-07">October 7, 2026</time></h2>
 <ul>
-  <li>Localized all three Chrome Web Store screenshots for every supported Store language instead of reusing another locale's artwork.</li>
-</ul>
-
-<h2 id="v0-3-55"><span>0.3.55</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
-<ul>
-  <li>No user-facing behavior changed; final release verification now proves that the signed-in checks were performed against the exact Store ZIP being submitted.</li>
-</ul>
-
-<h2 id="v0-3-54"><span>0.3.54</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
-<ul>
-  <li>Improved Claude feature-limit accuracy when Cowork reports its own weekly allowance.</li>
-  <li>Added a safer final Store-upload check so a release cannot be submitted while signed-in verification is still pending or incomplete.</li>
-</ul>
-
-<h2 id="v0-3-53"><span>0.3.53</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
-<ul>
-  <li>Improved Hindi, Filipino, and Dutch interface localization so ordinary UI labels no longer fall back to English.</li>
-  <li>Strengthened localization QA so translated UI copy cannot silently become stale when the English source changes.</li>
-</ul>
-
-<h2 id="v0-3-52"><span>0.3.52</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
-<ul>
-  <li>Added Italian, Traditional Chinese, Vietnamese, Thai, Turkish, Hindi, Polish, Dutch, Filipino, Simplified Chinese, and Russian localization for the extension and Chrome Web Store listings.</li>
-  <li>Expanded market-written Store search copy while keeping the in-extension product identity and runtime behavior unchanged.</li>
-</ul>
-
-<h2 id="v0-3-51"><span>0.3.51</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
-<ul>
-  <li>Improved Chrome Web Store discoverability with market-specific titles and regional Spanish/Portuguese search wording, while keeping the in-extension brand unchanged.</li>
-  <li>Simplified the public privacy contact line and stopped attaching diagnostic metadata to the external contact-form URL.</li>
-</ul>
-
-<h2 id="v0-3-50"><span>0.3.50</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
-<ul>
-  <li>Simplified the public privacy policy so the same data-handling facts are easier to scan; extension behavior is unchanged.</li>
-</ul>
-
-<h2 id="v0-3-49"><span>0.3.49</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
-<ul>
-  <li>No user-facing behavior changed; this release makes Chrome Web Store review inputs harder to drift from the extension that is actually packaged.</li>
-</ul>
-
-<h2 id="v0-3-48"><span>0.3.48</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
-<ul>
-  <li>Improved reliability on Chrome 116–123 by recognizing the legacy <code>AbortError</code> shape from request timeouts instead of reporting it as offline.</li>
-  <li>Added regression coverage for ChatGPT accounts that report a weekly usage window in <code>primary_window</code> with no five-hour window.</li>
-  <li>Notification status is re-checked when the options or welcome page regains focus, so a changed Chrome/system permission does not leave stale UI.</li>
-</ul>
-
-<h2 id="v0-3-47"><span>0.3.47</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
-<ul>
-  <li>Added a concise Chrome Web Store privacy-form summary for release/submission work; runtime behavior is unchanged.</li>
-</ul>
-
-<h2 id="v0-3-46"><span>0.3.46</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
-<ul>
-  <li>Chrome's extension-management card now shows the clean <strong>AI Limit Notifier</strong> name and a shorter localized summary instead of a long keyword-heavy title and a clipped description.</li>
-  <li>No provider, notification, Continue, permission, storage or usage-tracking behavior changed.</li>
-</ul>
-
-<h2 id="v0-3-45"><span>0.3.45</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
-<ul>
-  <li>No user-facing behavior changed; release QA now uses the browser channel Playwright supports for unpacked Chrome extensions instead of relying on branded-Chrome sideload flags.</li>
-</ul>
-
-<h2 id="v0-3-44"><span>0.3.44</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
-<ul>
-  <li>No user-facing behavior changed; this release strengthens the checks around the exact Chrome Web Store build and current Stable Chrome.</li>
-</ul>
-
-<h2 id="v0-3-43"><span>0.3.43</span> <time class="release-date" datetime="2026-10-04">October 4, 2026</time></h2>
-<ul>
-  <li>ChatGPT no longer shows a false sign-in-needed state when its session endpoint returns meaningful but unfamiliar signed-in data; that case is reported as a changed provider response instead.</li>
-  <li>A one-off ChatGPT usage-token mismatch now refreshes the browser session once and retries the usage request before showing an error.</li>
-</ul>
-
-<h2 id="v0-3-42"><span>0.3.42</span> <time class="release-date" datetime="2026-10-03">October 3, 2026</time></h2>
-<ul>
-  <li>Continue no longer treats an old conversation in a background Chrome window as recently used on Chrome 116–120, where the <code>lastAccessed</code> tab timestamp is unavailable.</li>
-  <li>A temporary HTTP 503 now respects the service's <code>Retry-After</code> instruction without being mislabeled or counted as an HTTP 429 rate limit.</li>
-</ul>
-
-<h2 id="v0-3-41"><span>0.3.41</span> <time class="release-date" datetime="2026-10-03">October 3, 2026</time></h2>
-<ul>
-  <li>Temporary service failures and HTTP 429 rate limits now keep separate retry histories, so a change between them starts with the correct first retry instead of inheriting an unrelated delay.</li>
-  <li>Damaged saved model-limit state is discarded before reset detection, preventing a false model-limit reset notification after storage corruption.</li>
-</ul>
-
-<h2 id="v0-3-40"><span>0.3.40</span> <time class="release-date" datetime="2026-10-03">October 3, 2026</time></h2>
-<ul>
-  <li>Refresh reports success only after the service worker confirms the refresh; a worker failure no longer flashes “Updated just now.”</li>
-  <li>If a settings change cannot be confirmed, the popup reloads the saved setting instead of leaving an optimistic control state behind.</li>
-  <li>Reset timestamps are parsed by their provider field contract, so absolute sentinel values cannot be mistaken for a reset happening now.</li>
-</ul>
-
-<h2 id="v0-3-39"><span>0.3.39</span> <time class="release-date" datetime="2026-10-02">October 2, 2026</time></h2>
-<ul>
-  <li>First release.</li>
+  <li>In a ChatGPT workspace with spend controls, a member whose credit budget is used up now reads as usable again as soon as the 5-hour or weekly limit resets, and the reset is announced. Before, ChatGPT read as limited until the spending period ended, for example <code>9d+</code>, and no reset notification came.</li>
+  <li>When ChatGPT stops a workspace for a reason the extension does not know yet, credits on the account no longer make it read as usable, so no false reset notification comes and Continue conversation sends nothing into a workspace that is still stopped.</li>
+  <li>A ChatGPT limit that ChatGPT still reports for a moment after its window has reset is now checked again within minutes and its end announced, instead of reading as a limit with no end for up to a quarter of an hour.</li>
+  <li>An answer from ChatGPT that names no account (its session holding only a warning) no longer throws away a limit in progress: for up to half an hour the last values stay, labeled as last known, and the reset is announced once ChatGPT names the account again.</li>
+  <li>After Chrome restarts, Continue conversation no longer takes a conversation that Chrome restored in a window behind the one in front, which Chrome reports as just used even when it was untouched for days.</li>
+  <li>Continue conversation no longer sends a file or pasted text that waits in the message box along with the word: nothing is typed, and what you attached stays.</li>
+  <li>When Continue conversation cannot confirm that its message went out, it now always asks you to check the conversation. Before, if the message box still held the word after three seconds, it told you to send the message yourself, which sent it twice when the service cleared its message box late.</li>
+  <li>Claude no longer reads as a changed response when it reports a limit without a percentage, as it can for one not started yet, and a pending reset notification is no longer lost then.</li>
+  <li>On the setup page, a button whose label wraps in a narrow window now grows to fit it instead of cutting it off.</li>
+  <li>A 90% warning that groups several limits now lists them by name, one after another, as the popup does; in Russian and Ukrainian, the line that says since when a service is available again reads correctly.</li>
+  <li>When the popup's Continue conversation gets no answer, it can simply be tried again, or, when the message may already have gone out, the popup asks you to check the conversation instead of telling you to send it yourself.</li>
+  <li>Screen readers now hear when a refresh you asked for fails and when a service is hidden, and the Claude organization list in Settings has a name. On the setup page, keyboard focus stays in place after access is allowed.</li>
+  <li>Times now read alike throughout the popup (for example “heute 07:11” beside “Fr., 08:53” in German), Turkish lines that start with a time start with a capital, Vietnamese no longer capitalizes “hôm nay” in mid-sentence, and a wait of a day or more is rounded up instead of showing up to 59 minutes less.</li>
+  <li>A long conversation title no longer widens the popup.</li>
+  <li>When a ChatGPT limit ends and ChatGPT then reports no usage at all (for example a workspace whose credits were topped up), the reset notification now comes and Continue conversation is offered, and the popup says that ChatGPT reports no usage. A ChatGPT workspace that ChatGPT reports as stopped (its credits or spending limit used up) now shows as limited also when ChatGPT reports no usage for it; before, it read as an account that doesn't report usage limits. A stop for a reason the extension does not know yet is no longer taken for its end.</li>
+  <li>A limit reached just before you lock the computer or step away is now announced when it resets. Before, a limit that no check had seen yet was never announced.</li>
+  <li>While a limit is 90% used or more, or while its usage keeps rising, it is checked every 15 minutes even while the computer is idle, so a limit that Claude Code or Codex uses up while you are away is announced at its reset.</li>
+  <li>If Claude reports no usage window at all, or only a model limit (for example Opus), while nothing is running, your limits now show as not started and a pending reset notification still comes. Before, Claude could look like an account without limits, and the notification was lost. A used-up limit that Claude or ChatGPT leaves out of its answer for a while now stays used up until its reset, or, when the service does not report its reset time, for a whole 5-hour or weekly window, so the reset is never announced early and Continue conversation never sends while the limit still holds.</li>
+  <li>Continue conversation is no longer offered for a conversation opened only after the reset, also when the reset is confirmed minutes later or the first check after it fails, and also when you open it in the first minute after Chrome starts. The conversation you were using at the reset is still offered, also when you came back to it, even many times, or looked at another conversation, before the reset was confirmed, and a conversation that Chrome restores at start-up in the window in front is still offered for a reset that passed while Chrome was closed, also when Chrome was closed just as the limit was reached.</li>
+  <li>A conversation left on screen while you are away from the computer (locked, or idle for 15 minutes) no longer counts as one you are using, also if the page reloads meanwhile, so a limit that Claude Code or Codex uses up while you are away is not offered for that conversation.</li>
+  <li>Continue conversation now checks the message box once more right before sending. If the page restored a draft, or you typed something, after the continue message went in, nothing is sent and your text stays as it is; before, it could be sent along with it.</li>
+  <li>Continue conversation now works once per reset also while this extension's notifications are turned off. Before, the popup could offer it again after you had used it, so the message could be sent twice, or offer a conversation you opened only after the reset; and a reset you had already continued was announced when notifications were turned back on.</li>
+  <li>A Continue conversation click that runs into a storage error, or any other unexpected error, can now simply be tried again. Before, it said that the conversation was not found while the offer stayed busy, and the message could later be sent twice.</li>
+  <li>Signing in to another account, or choosing another Claude organization, now stores the new usage also when Continue conversation's state cannot be cleared. Until it can be, Continue conversation waits, also after you hide a service or remove its site access, so nothing is ever sent into a conversation of the previous account or organization.</li>
+  <li>A reset notification shown late (for example after notifications were turned back on) offers Continue conversation only while its conversation is still open.</li>
+  <li>When you allow a service's site access while one of its conversations is open in front of you, Continue conversation can now offer that conversation at the next reset; before, it was recognized only after you switched tabs. When the extension is installed or updated while Chrome is running, the conversation you used last in each service is followed, whichever window Chrome lists first; when Chrome starts, the one in the window in front.</li>
+  <li>Hiding a service, choosing another Claude organization or removing site access while Continue conversation checks the service now cancels it quietly. Before, it could still open the conversation and ask you to send the message.</li>
+  <li>When Continue conversation in the popup finds the service limited again, the popup now says so in the service's row; before, the message disappeared with the button. When it can only open the conversation (for example after a failed check), a notification now says to send the message yourself; before, the popup closed without a word.</li>
+  <li>In a ChatGPT workspace with a spending limit, a used-up 5-hour or weekly limit now counts down to its own reset, never to the end of the spending period (for example <code>9d+</code> instead of <code>2h</code>), also when the spending limit reads 100% while ChatGPT reports it not reached; the reset notification already came at the real reset. Credits no longer count as available once the spending limit that caps them is used up.</li>
+  <li>In a ChatGPT workspace whose spending limit is used up while a 5-hour or weekly limit is used up too, the toolbar badge and the popup now count down to that limit's reset, when the included allowance is back. When ChatGPT does not say when a limit ends, nothing is counted down: the popup names the cause (for example “Workspace limit”) instead of an unexplained “Limit reached”, and a used-up limit beside it says only when it resets, never that the service is available again then.</li>
+  <li>A ChatGPT limit whose reset ChatGPT gives as a countdown no longer appears twice in the popup now and then.</li>
+  <li>A Claude session or weekly limit that applies to one model or surface no longer marks all of Claude as limited. A Claude limit that Claude marks as locked now counts as reached even when its percentage stops short of 100%, and extra usage you turned off no longer counts as available.</li>
+  <li>When the Claude organization you chose is no longer in your account (for example after signing in with another account), the popup now asks you to choose again instead of showing another organization as the one already chosen.</li>
+  <li>When you turn a service back on, also right after turning it off, or choose another Claude organization, the popup now shows it loading until its usage arrives. Before, it said for a moment that the service couldn't be reached, or showed its numbers from before. Choosing another Claude organization hides the previous one's numbers at once, and while Claude asks the extension to wait, the new organization waits too instead of being asked at once.</li>
+  <li>If Claude asks the extension to wait while it lists your organizations, the extension now waits as asked instead of asking again at once, and the Settings page offers the choice again when the wait is over. Before, the choice stayed away until the page was reopened.</li>
+  <li>After you sign out of Claude, sign in with another account or turn Claude off and on again, the Settings page no longer shows the previous organizations; it loads the list again once Claude can answer.</li>
+  <li>In Settings, moving through the list of Claude organizations with the arrow keys no longer switches to each organization on the way, which discarded its limit period and Continue offer; the choice is made when you press Enter or leave the list, and Escape goes back to the organization in use. In the popup's “Choose an organization” row, every organization can now be chosen with the keyboard.</li>
+  <li>After you sign in to Claude with another account, a check that fails for a moment no longer shows the previous account's numbers as last known. A second sign-in error right after Claude listed your organizations no longer says that you are signed out; the next check settles it.</li>
+  <li>Removing a service's site access while the service has asked the extension to wait now shows at once that access is needed. Before, the limit, its countdown and its checks stayed for up to a day.</li>
+  <li>When ChatGPT answers in its newer way that there is no session, the popup now says to sign in instead of reporting that ChatGPT's response changed; if ChatGPT still accepts the browser, its usage is shown.</li>
+  <li>The toolbar button's description (also what screen readers say) now names an account that reports no usage as such instead of saying the check failed, and says when its numbers are last known, with their time. Once every limit it shows has passed its reset, it says that the reset is being checked, as the popup does, instead of naming only the service. When the toolbar badge shows the service you chose, the description keeps counting down the other service's limit; before, its time stood still until the next check.</li>
+  <li>While a limit is days away from its reset, the extension no longer wakes up every minute to redraw the toolbar badge; it redraws it when the time shown changes.</li>
+  <li>When a refresh fails while a limit is reached, the popup now still says “Limit reached” on the service's first line, with the time of the last known values below it. Before, that time took the state's place; “Checking…”, “Still available”, “Using credits” and “Using extra usage” stay named the same way.</li>
+  <li>With 90% warnings on, a limit whose reset time the service does not report is now warned about too: once while it stays at 90% or more, and again after it has been lower. A warning that groups several limits writes each percentage the way your language does (57 % in German, %57 in Turkish), as the popup does.</li>
+  <li>With Track model limits on, a model limit that Claude still reports as used up at its reset time is checked again within minutes, so its notice no longer waits until you come back, and a model limit's reset is announced also when the extension stopped right after it saw that limit used up. Turning the option on while checks are failing still remembers the model limits already used up. A reset that could not be announced while this extension's notifications were turned off is no longer announced hours or days later; like the reset notification, it is tried again for an hour.</li>
+  <li>A reset eight days away keeps its date across a change to or from daylight saving time; before, it could read as the coming weekday.</li>
+  <li>A usage that a service reports as -0 now reads 0%, never “-0%”.</li>
+  <li>The Settings page now scrolls when the window is shorter than its settings, and its top bar stays in view. Before, the settings at the bottom could not be reached, for example on a small screen, when zoomed in, or in German with several Claude organizations.</li>
+  <li>Refresh and Continue conversation keep keyboard focus while they work, so screen readers announce “Refreshing…” and “Sending…”.</li>
+  <li>Opening Settings no longer uses up the popup's reminders to pin the icon.</li>
+  <li>Settings changed quickly one after another are no longer lost when Chrome's site-access prompt closes the popup.</li>
+  <li>Before you allow a service's site access, the popup and the setup page now say exactly what is read: your usage and which conversation you used last, never your conversation history. The Store listing says the same, and that Continue conversation sends a message only when you click.</li>
+  <li>The setup page now ends with Open ChatGPT and Open Claude instead of Done. Once the services you turned on have site access and have been checked and the icon is pinned, each opens its service (a browser that reports a pinned icon as not pinned no longer holds setup back: that report can be dismissed), bringing a tab of it forward if one is open, and no setup tab is left behind; what only your account or the popup can settle (a sign-in, an organization to choose, an account that reports no usage) no longer holds setup back.</li>
+  <li>The setup page is easier to read: its text is larger, and the buttons that end it stay in view at the bottom of the window.</li>
+  <li>In a browser language the extension has no translation for (Swedish, for example), dates, times and numbers are now written as in the English text around them, and screen readers read the popup and the setup page as English. Before, the English text carried that language's dates, such as “i morgon 8:00”.</li>
+  <li>In Portugal, the extension now speaks European Portuguese; it used Brazil's wording before. Latin American Spanish now has its own wording instead of Spain's (for example “Verificando” and “ícono”), Hindi is written in standard Hindi with the same words as Chrome's Hindi menus, and percentages are written the way each language writes them (57 % in German, French, Spanish and Russian, %57 in Turkish).</li>
+  <li>The wording of all 21 translations was reviewed twice, the second time from a native speaker's point of view, and corrected throughout: for example, a service that could not be checked no longer reads as one you cannot use, the reset notification says that your conversation can be continued, the Dutch refresh button lost a typo, a Hindi settings label no longer says the opposite, French, Russian, Ukrainian and Indonesian sentences no longer break when they name a conversation from yesterday, and Japanese spaces service names as Chrome does. In German and Hindi, the message that a refresh failed now reads right when it names both services.</li>
+  <li>The privacy policy now says who is responsible, what leaves your device and to whom, how the contact form handles what you send, and what you can ask for.</li>
 </ul>
 </main>
 <footer class="wrap site-footer">
   <p class="links">
-    <a href="https://chromewebstore.google.com/search/AI%20Limit%20Notifier">Chrome Web Store</a>
+    <a href="https://chromewebstore.google.com/detail/llpojlchnippliileocmoaokjnbionfl">Chrome Web Store</a>
     <a href="../release-notes/">Release notes</a>
     <a href="../privacy/">Privacy policy</a>
     <a href="https://tally.so/r/EkyxyX" rel="noopener">Contact</a>
   </p>
-  <p class="fine">AI Limit Notifier is an independent project, not affiliated with or endorsed by OpenAI or Anthropic. ChatGPT is a trademark of OpenAI. Claude is a trademark of Anthropic.</p>
+  <p class="fine">Made by <a href="https://songej.com/" rel="noopener">Eunjeong Song</a>. AI Limit Notifier is an independent project, not affiliated with or endorsed by OpenAI, Anthropic, or Google LLC. ChatGPT is a trademark of OpenAI. Claude is a trademark of Anthropic, PBC. Chrome is a trademark of Google LLC.</p>
 </footer>
 </body>
 </html>

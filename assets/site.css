@@ -36,7 +36,8 @@ a:hover { text-decoration-thickness: 2px; }
 .skip:focus { left: 1rem; top: 1rem; z-index: 10; padding: 0.5rem 0.85rem; background: var(--paper); border: 1px solid var(--rule); }
 
 .site-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.2rem; border-bottom: 1px solid var(--rule); }
-.brand { color: var(--ink); font-weight: 650; text-decoration: none; }
+.brand { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--ink); font-weight: 650; text-decoration: none; white-space: nowrap; }
+.brand img { display: block; flex: none; width: 28px; height: 28px; }
 .site-header nav { display: flex; flex-wrap: wrap; gap: 0.45rem 1rem; font-size: 0.95rem; }
 .site-header nav a { color: var(--muted); text-decoration: none; }
 .site-header nav a:hover, .site-header nav a[aria-current="page"] { color: var(--ink); }
@@ -44,15 +45,16 @@ a:hover { text-decoration-thickness: 2px; }
 main { padding-block: 2.25rem 1rem; }
 h1 { margin: 0 0 0.9rem; font-size: clamp(2.05rem, 6vw, 2.85rem); line-height: 1.12; letter-spacing: -0.025em; }
 h2 { margin: 2.75rem 0 0.7rem; font-size: 1.28rem; line-height: 1.3; }
-h3 { margin: 1.55rem 0 0.25rem; font-size: 1.05rem; }
 .prose h1 { font-size: clamp(1.85rem, 5vw, 2.2rem); }
 .lead { max-width: 41rem; margin: 0 0 1.5rem; font-size: 1.23rem; color: var(--muted); }
-.meta, .note, .release-date { color: var(--muted); font-size: 0.96rem; }
+.meta, .release-date { color: var(--muted); font-size: 0.96rem; }
 
 .get { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; margin: 1.4rem 0 2.2rem; }
 .button { display: inline-block; padding: 0.72rem 1.25rem; color: #ffffff; background: var(--button); border-radius: 999px; font-weight: 650; text-decoration: none; }
 .button:hover { background: var(--button-hover); text-decoration: none; }
 .get-note { color: var(--muted); font-size: 0.96rem; }
+
+main strong { font-weight: inherit; }
 
 .facts, .prose ul { padding-left: 1.2rem; }
 .facts li + li, .prose li + li { margin-top: 0.42rem; }
@@ -63,9 +65,9 @@ code { padding: 0.08em 0.25em; background: var(--key); border-radius: 0.25em; fo
 .links { display: flex; flex-wrap: wrap; gap: 0.45rem 1.15rem; }
 .fine { font-size: 0.84rem; }
 
+/* Narrow screens: the name stays on one line and the links move under it. */
 @media (max-width: 520px) {
-  .site-header { align-items: flex-start; }
-  .site-header nav { justify-content: flex-end; }
+  .site-header { flex-wrap: wrap; row-gap: 0.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
